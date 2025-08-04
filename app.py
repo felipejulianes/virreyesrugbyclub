@@ -104,7 +104,7 @@ st.markdown('<div class="mensaje-central">Cada chico que está en el club es gra
 # Imagen principal con filtro oscuro
 st.markdown(f"""
     <div class="img-container">
-        <img src="{data['imagen']}" alt="Imagen de campaña">
+        <img src="vrc.jpg" alt="Imagen de campaña">
     </div>
 """, unsafe_allow_html=True)
 
