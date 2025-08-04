@@ -3,7 +3,7 @@ import urllib.parse
 from embajadores import embajadores
 
 # Configuración general
-st.set_page_config(page_title="Sumate como socio aportante", layout="wide")
+st.set_page_config(page_title="Sumate como socio aportante...", layout="wide")
 
 # Leer parámetro de la URL
 query_params = st.query_params
