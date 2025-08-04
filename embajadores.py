@@ -1,3 +1,4 @@
+
 embajadores = {
     "general": {
         "nombre": "General",

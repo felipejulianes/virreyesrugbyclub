@@ -1,16 +1,14 @@
+
 import streamlit as st
-import urllib.parse
+from PIL import Image, ImageEnhance
 from embajadores import embajadores
 
-# Configuración general
-st.set_page_config(page_title="Sumate como socio aportante...", layout="wide")
+st.set_page_config(page_title="Sumate como socio aportante", layout="wide")
 
-# Leer parámetro de la URL
 query_params = st.query_params
 embajador_key = query_params.get("embajador", "general")
 data = embajadores.get(embajador_key, embajadores["general"])
 
-# Estilos CSS personalizados
 st.markdown(f"""
     <style>
         body {{
@@ -29,17 +27,6 @@ st.markdown(f"""
             font-weight: bold;
             margin: 2rem 0;
             color: white;
-        }}
-        .img-container {{
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-        }}
-        .img-container img {{
-            width: 100%;
-            border-radius: 12px;
-            filter: brightness(0.6);
         }}
         .botones-container {{
             display: flex;
@@ -91,24 +78,16 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# --- CONTENIDO ---
-
 st.markdown('<div class="main-container">', unsafe_allow_html=True)
 
-# Logo superior
 st.image("logovrc.png", width=120)
 
-# Mensaje central
 st.markdown('<div class="mensaje-central">Cada chico que está en el club es gracias a alguien que apostó por este sueño. Vos podés ser ese alguien.</div>', unsafe_allow_html=True)
 
-# Imagen principal con filtro oscuro
-st.markdown(f"""
-    <div class="img-container">
-        <img src="vrc.jpg" alt="Imagen de campaña">
-    </div>
-""", unsafe_allow_html=True)
+image = Image.open(data["imagen"])
+dark_image = ImageEnhance.Brightness(image).enhance(0.6)
+st.image(dark_image, use_column_width=True)
 
-# Botones de donación
 st.markdown('<div class="botones-container">', unsafe_allow_html=True)
 st.markdown(f'<a class="donar-btn" href="{data["links"]["20000"]}" target="_blank">$20.000</a>', unsafe_allow_html=True)
 st.markdown(f'<a class="donar-btn" href="{data["links"]["40000"]}" target="_blank">$40.000</a>', unsafe_allow_html=True)
@@ -116,13 +95,7 @@ st.markdown(f'<a class="donar-btn" href="{data["links"]["60000"]}" target="_blan
 st.markdown(f'<a class="donar-btn" href="{data["links"]["libre"]}" target="_blank">Monto libre</a>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Testimonio
 st.markdown('<div class="testimonio">“Más de 600 chicos entrenan y estudian en el club gracias al aporte de personas como vos.”</div>', unsafe_allow_html=True)
-
-# Logo inferior
 st.image("logovrc.png", width=120)
-
-# Footer
 st.markdown('<div class="footer">El link redirige al sitio de donación segura a través de Mercado Pago. Podés cancelarla cuando quieras.</div>', unsafe_allow_html=True)
-
 st.markdown('</div>', unsafe_allow_html=True)
