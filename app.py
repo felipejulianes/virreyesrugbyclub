@@ -86,7 +86,7 @@ st.markdown('<div class="mensaje-central">Cada chico que está en el club es gra
 
 image = Image.open(data["imagen"])
 dark_image = ImageEnhance.Brightness(image).enhance(0.6)
-st.image(dark_image, use_column_width=True)
+st.image(dark_image, use_container_width=True)
 
 st.markdown('<div class="botones-container">', unsafe_allow_html=True)
 st.markdown(f'<a class="donar-btn" href="{data["links"]["20000"]}" target="_blank">$20.000</a>', unsafe_allow_html=True)
