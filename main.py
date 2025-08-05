@@ -13,7 +13,7 @@ data = embajadores.get(embajador_key, embajadores["general"])
 st.markdown("""
     <style>
         body, .stApp {
-            background-color: #237d33 !important;
+            background-color: #527D2E !important;
             color: white !important;
         }
 
