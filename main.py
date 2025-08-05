@@ -79,12 +79,14 @@ st.markdown(
 st.image(data["imagen"], use_container_width=True)
 
 # Botones de donación
-st.markdown("<div class='montos-container'>", unsafe_allow_html=True)
-st.markdown(f"<a class='boton-donacion' href='{data['links']['20000']}' target='_blank'>$20.000</a>", unsafe_allow_html=True)
-st.markdown(f"<a class='boton-donacion' href='{data['links']['40000']}' target='_blank'>$40.000</a>", unsafe_allow_html=True)
-st.markdown(f"<a class='boton-donacion' href='{data['links']['60000']}' target='_blank'>$60.000</a>", unsafe_allow_html=True)
-st.markdown(f"<a class='boton-donacion' href='{data['links']['libre']}' target='_blank'>Otro monto</a>", unsafe_allow_html=True)
-st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(f"""
+    <div class='montos-container'>
+        <a class='boton-donacion' href='{data["links"]["20000"]}' target='_blank'>$20.000</a>
+        <a class='boton-donacion' href='{data["links"]["40000"]}' target='_blank'>$40.000</a>
+        <a class='boton-donacion' href='{data["links"]["60000"]}' target='_blank'>$60.000</a>
+        <a class='boton-donacion' href='{data["links"]["libre"]}' target='_blank'>Otro monto</a>
+    </div>
+""", unsafe_allow_html=True)
 
 # Footer
 st.markdown("""
