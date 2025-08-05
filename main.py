@@ -11,7 +11,7 @@ data = embajadores.get(embajador_key, embajadores["general"])
 st.markdown("""
     <style>
         body, .stApp {
-            background-image: url('https://yourdomain.com/fondo.jpg');
+            background-image: url('https://github.com/felipejulianes/virreyesrugbyclub/blob/main/vrc.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -67,6 +67,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 col = st.columns(3)[1]
 with col:
