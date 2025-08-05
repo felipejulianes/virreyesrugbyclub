@@ -59,7 +59,7 @@ st.markdown("""
 
 col = st.columns(3)[1]  # columna del medio
 with col:
-    st.image("logovrc.png", width=180)
+    st.image("logovrc.png", width=250)
 
 
 # Título central
