@@ -8,24 +8,13 @@ query_params = st.query_params
 embajador_key = query_params.get("embajador", "general")
 data = embajadores.get(embajador_key, embajadores["general"])
 
+
+# Estilo CSS mínimo para botones horizontales uniformes
 st.markdown("""
     <style>
         body, .stApp {
-            background-image: url('https://github.com/felipejulianes/virreyesrugbyclub/blob/main/vrc.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #237d33 !important;
             color: white !important;
-            position: relative;
-        }
-
-        .stApp::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(35, 125, 51, 0.6); /* overlay verde con transparencia */
-            z-index: -1;
         }
 
         h1, p, div, span {
@@ -67,6 +56,7 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 col = st.columns(3)[1]
