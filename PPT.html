@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMOS VIRREYES - Presentación</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general layout */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .presentation-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* Rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Soft shadow */
+            max-width: 900px; /* Max width for readability */
+            width: 100%;
+            padding: 2.5rem; /* Increased padding */
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            min-height: 60vh; /* Minimum height for consistent look */
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+            animation: fadeIn 0.5s ease-out; /* Fade in animation */
+        }
+        .section.active {
+            display: block; /* Show active section */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .nav-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; /* Rounded button corners */
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+        .nav-button:hover {
+            transform: translateY(-2px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        .prev-button {
+            background-color: #cbd5e1; /* Gray-300 */
+            color: #475569; /* Slate-600 */
+        }
+        .prev-button:hover {
+            background-color: #94a3b8; /* Gray-400 */
+        }
+        .next-button {
+            background-color: #2563eb; /* Blue-700 */
+            color: #ffffff;
+        }
+        .next-button:hover {
+            background-color: #1d4ed8; /* Blue-800 */
+        }
+        h1 {
+            font-size: 2.5rem; /* Larger heading */
+            font-weight: 800; /* Extra bold */
+            color: #1e3a8a; /* Dark blue */
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1.75rem; /* Sub-heading size */
+            font-weight: 700; /* Bold */
+            color: #1e40af; /* Medium blue */
+            margin-bottom: 1rem;
+        }
+        p, ul, li {
+            font-size: 1.125rem; /* Larger body text */
+            line-height: 1.75;
+            color: #334155; /* Slate-700 */
+            margin-bottom: 1rem;
+        }
+        strong {
+            color: #102e70; /* Even darker blue for emphasis */
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+            margin: 2rem 0;
+        }
+        .code-example {
+            background-color: #e2e8f0; /* Gray-200 for code blocks */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.95rem;
+            color: #1a202c; /* Dark text for code */
+            overflow-x: auto; /* Allow horizontal scrolling for long links */
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Main Title -->
+        <h1 class="text-center mb-6">SOMOS VIRREYES</h1>
+
+        <!-- Section 1: Apertura emocional -->
+        <div id="section1" class="section active">
+            <h3 class="text-center">Apertura emocional – El porqué</h3>
+            <p class="text-center italic text-lg text-gray-700 mb-4">
+                "Cada chico que entra al club encuentra mucho más que un lugar para entrenar. Encuentra un espacio donde **pertenecer, crecer, y construir una identidad**. Eso es lo que estamos sosteniendo juntos."
+            </p>
+            <p><strong>Objetivo de esta campaña:</strong></p>
+            <ul class="list-disc pl-6">
+                <li>No es solo recaudar.</li>
+                <li>Es garantizar que más chicos encuentren en Virreyes un espacio de oportunidades.</li>
+            </ul>
+        </div>
+
+        <!-- Section 2: ¿Dónde estamos hoy? -->
+        <div id="section2" class="section">
+            <h3>¿Dónde estamos hoy?</h3>
+            <ul class="list-disc pl-6">
+                <li>Tenemos **600 socios aportantes activos**.</li>
+                <li>Representan aproximadamente **3 millones de pesos mensuales**.</li>
+            </ul>
+            <p><strong>Necesitamos crecer para:</strong></p>
+            <ul class="list-disc pl-6">
+                <li>Sostener lo que ya existe.</li>
+                <li>Ampliar el alcance.</li>
+                <li>No frenar el impacto social del club.</li>
+            </ul>
+        </div>
+
+        <!-- Section 3: Objetivo de la campaña -->
+        <div id="section3" class="section">
+            <h3>Objetivo de la campaña</h3>
+            <p><strong>Meta clara y concreta:</strong></p>
+            <p class="text-center italic text-lg text-gray-700 mb-4">
+                "Llegar a **1.000 socios activos antes de mitad de 2026**."
+            </p>
+            <ul class="list-disc pl-6">
+                <li>Eso implica sumar **400 nuevos socios**.</li>
+                <li>Con eso, **duplicamos el alcance** y garantizamos el futuro del club.</li>
+            </ul>
+        </div>
+
+        <!-- Section 4: ¿Cómo lo vamos a lograr? Con vos. -->
+        <div id="section4" class="section">
+            <h3>¿Cómo lo vamos a lograr? Con vos.</h3>
+            <p class="text-center italic text-lg text-gray-700 mb-4">
+                "No estamos contratando una agencia.<br>
+                No estamos haciendo algo para afuera.<br>
+                Estamos haciendo algo **entre todos**.<br>
+                Porque **somos Virreyes**."
+            </p>
+            <ul class="list-disc pl-6">
+                <li>Esta campaña se basa en **embajadores internos**: entrenadores, dirigentes, referentes del club.</li>
+                <li>Cada uno con una misión simple: **invitar a 10 personas** que crean en este proyecto a sumarse como socios.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Detalles Conceptuales, Comunicacionales y Técnicos (Intro) -->
+        <div id="section5" class="section">
+            <h2 class="text-2xl font-bold text-blue-800 text-center">Detalles Conceptuales, Comunicacionales y Técnicos</h2>
+            <p class="text-center mt-4 text-gray-600">
+                A continuación, profundizaremos en los aspectos clave de la campaña.
+            </p>
+        </div>
+
+        <!-- Section 6: Estructura conceptual -->
+        <div id="section6" class="section">
+            <h3>Estructura conceptual</h3>
+            <p><strong>3 pilares de la campaña:</strong></p>
+            <ul class="list-disc pl-6">
+                <li>Recuperar donantes caídos.</li>
+                <li>Aumentar el monto promedio de algunos actuales.</li>
+                <li>Sumar nuevos aportantes.</li>
+            </ul>
+            <p class="text-center italic text-lg text-gray-700 mt-4">
+                Pero todo bajo una misma idea:<br>
+                "**SOMOS VIRREYES**. Y esto lo sostenemos entre todos."
+            </p>
+        </div>
+
+        <!-- Section 7: Comunicación y tono -->
+        <div id="section7" class="section">
+            <h3>Comunicación y tono</h3>
+            <ul class="list-disc pl-6">
+                <li>Lenguaje **emocional, directo, sin culpa**.</li>
+                <li>No vendemos nada. **Invitamos a ser parte**.</li>
+            </ul>
+            <p><strong>Frases tipo:</strong></p>
+            <ul class="list-disc pl-6">
+                <li>"Tu aporte no es una ayuda. Es una **inversión en futuro**."</li>
+                <li>"Con vos, **llegamos más lejos**."</li>
+                <li>"Sos parte de algo mucho más grande que vos."</li>
+            </ul>
+        </div>
+
+        <!-- Section 8: Herramientas para los embajadores -->
+        <div id="section8" class="section">
+            <h3>Herramientas para los embajadores</h3>
+            <p>Cada embajador tendrá:</p>
+            <ul class="list-disc pl-6">
+                <li>Un **link personalizado** a su campaña
+                    <div class="code-example mt-2">
+                        Ejemplo: `https://virreyesrugbyclub.org/donaciones?embajador=jorge`
+                    </div>
+                </li>
+                <li>Un **mensaje sugerido** para compartir
+                    <div class="code-example mt-2">
+                        "Estoy invitando a gente querida a sumarse al Virreyes con una donación mensual. Con tu aporte, sostenemos un lugar que transforma vidas. Sumate desde acá: [link]"
+                    </div>
+                </li>
+                <li>**Instrucciones simples**
+                    <ul class="list-disc pl-6 mt-2">
+                        <li>Cómo compartir por WhatsApp o redes.</li>
+                        <li>Qué responder ante dudas.</li>
+                        <li>Acompañamiento del equipo.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Section 9: Seguimiento e impacto -->
+        <div id="section9" class="section">
+            <h3>Seguimiento e impacto</h3>
+            <ul class="list-disc pl-6">
+                <li>Vamos a compartir **reportes de avance por embajador**.</li>
+                <li>No es para competir, sino para motivar.</li>
+            </ul>
+            <p><strong>Cada socio nuevo se traduce en:</strong></p>
+            <ul class="list-disc pl-6">
+                <li>Una camiseta, una vianda, una oportunidad.</li>
+            </ul>
+        </div>
+
+        <!-- Section 10: Soporte -->
+        <div id="section10" class="section">
+            <h3>Soporte</h3>
+            <p>Tendrán acceso a:</p>
+            <ul class="list-disc pl-6">
+                <li>Grupo de WhatsApp para dudas y seguimiento.</li>
+                <li>Persona de contacto para soporte técnico o de comunicación.</li>
+                <li>Material compartible (imagen, texto, video corto si se hace).</li>
+            </ul>
+        </div>
+
+        <!-- Section 11: Cierre de la reunión -->
+        <div id="section11" class="section">
+            <h3 class="text-center">Cierre de la reunión</h3>
+            <p class="text-center italic text-lg text-gray-700 mb-4">
+                "Sabemos que estamos todos a mil.<br>
+                Pero esto es **simple, concreto y poderoso**.<br>
+                Cada uno puede sumar 10 personas.<br>
+                Y si lo hacemos entre todos, **el Virreyes del futuro ya está acá**."
+            </p>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prevBtn" class="nav-button prev-button">Anterior</button>
+            <button id="nextBtn" class="nav-button next-button">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSectionIndex = 0;
+
+        // Function to show a specific section
+        function showSection(index) {
+            sections.forEach((section, i) => {
+                section.classList.remove('active');
+                if (i === index) {
+                    section.classList.add('active');
+                }
+            });
+            updateButtons();
+        }
+
+        // Function to update button visibility
+        function updateButtons() {
+            prevBtn.disabled = currentSectionIndex === 0;
+            nextBtn.disabled = currentSectionIndex === sections.length - 1;
+
+            if (prevBtn.disabled) {
+                prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+
+            if (nextBtn.disabled) {
+                nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // Event listener for "Previous" button
+        prevBtn.addEventListener('click', () => {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                showSection(currentSectionIndex);
+            }
+        });
+
+        // Event listener for "Next" button
+        nextBtn.addEventListener('click', () => {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                showSection(currentSectionIndex);
+            }
+        });
+
+        // Initial display
+        showSection(currentSectionIndex);
+    </script>
+</body>
+</html>
