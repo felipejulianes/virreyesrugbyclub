@@ -56,13 +56,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+col = st.columns(3)[1]
+with col:
+    st.image("logovrc.png", width=250)
 
-
-col1, col2 = st.columns([1, 4])  # más espacio para el título
-with col1:
-    st.image("logovrc.png", width=120)  # probá con 80 o 120 si no entra bien
-with col2:
-    st.markdown("<h1 style='margin-top: 0.8rem;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
 
 # Mensaje principal
