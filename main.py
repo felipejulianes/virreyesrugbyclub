@@ -79,6 +79,16 @@ st.markdown(
 # Imagen emotiva
 st.image(data["imagen"], use_container_width=True)
 
+# Mensaje antes de los botones
+st.markdown(
+    """
+    <p style='text-align: center; font-size: 1.1rem; margin-top: 1.5rem;'>
+    Quiero ser socio y contribuir mensualmente con la cantidad de:
+    </p>
+    """,
+    unsafe_allow_html=True
+)
+
 # Botones de donación
 st.markdown(f"""
     <div class='montos-container'>
@@ -98,4 +108,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Gracias
-st.caption("Gracias por confiar en lo que hacemos ❤️")
+st.caption("Gracias por confiar en lo que hacemos")
