@@ -31,7 +31,7 @@ st.markdown("""
         }
 
         .boton-donacion {
-            background-color: #fbca0c;
+            background-color: #F0CE00;
             color: black !important;
             padding: 0.8rem 1.6rem;
             font-size: 1.1rem;
@@ -44,7 +44,7 @@ st.markdown("""
         }
 
         .boton-donacion:hover {
-            background-color: #f1b200;
+            background-color: #CB8119;
             color: black !important;
         }
 
