@@ -57,8 +57,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Logo superior
-st.image("logovrc.png", width=100)
+col = st.columns(3)[1]  # columna del medio
+with col:
+    st.image("logovrc.png", width=180)
+
 
 # Título central
 st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
