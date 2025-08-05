@@ -56,16 +56,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<div style='margin-top: -50px;'></div>", unsafe_allow_html=True)  # achica el espacio superior
+col1, col2 = st.columns([1, 4])  # más espacio para el título
+with col1:
+    st.image("logovrc.png", width=100)  # probá con 80 o 120 si no entra bien
+with col2:
+    st.markdown("<h1 style='margin-top: 0.8rem;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
-col = st.columns(3)[1]
-with col:
-    st.image("logovrc.png", width=250)
-
-st.markdown("<div style='margin-top: -20px;'></div>", unsafe_allow_html=True)  # achica el espacio entre logo y título
-
-# Título central
-st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
 # Mensaje principal
 st.markdown(
