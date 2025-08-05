@@ -11,6 +11,15 @@ data = embajadores.get(embajador_key, embajadores["general"])
 # Estilo CSS mínimo para botones horizontales uniformes
 st.markdown("""
     <style>
+        body, .stApp {
+            background-color: #237d33 !important;
+            color: white !important;
+        }
+
+        h1, p, div, span {
+            color: white !important;
+        }
+
         .montos-container {
             display: flex;
             justify-content: center;
@@ -19,27 +28,34 @@ st.markdown("""
             margin-bottom: 2rem;
             flex-wrap: wrap;
         }
+
         .boton-donacion {
-            background-color: #237d33;
-            color: white;
+            background-color: #fbca0c;
+            color: black !important;
             padding: 0.8rem 1.6rem;
             font-size: 1.1rem;
             font-weight: bold;
             border: none;
             border-radius: 8px;
-            text-decoration: none;
+            text-align: center;
+            text-decoration: none !important;
+            display: inline-block;
         }
+
         .boton-donacion:hover {
-            background-color: #1b6226;
+            background-color: #f1b200;
+            color: black !important;
         }
+
         .footer {
             font-size: 0.9rem;
-            color: #555;
+            color: white;
             text-align: center;
             margin-top: 2rem;
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Logo superior
 st.image("logovrc.png", width=100)
