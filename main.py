@@ -58,8 +58,11 @@ st.markdown("""
 
 col = st.columns(3)[1]
 with col:
-    st.markdown("<div style='margin-top: -80px;'></div>", unsafe_allow_html=True)
-    st.image("logovrc.png", width=220)
+    st.markdown("""
+        <img src='logovrc.png' width='220' style='margin-top: -80px;'>
+    """, unsafe_allow_html=True)
+
+
 
 
 
