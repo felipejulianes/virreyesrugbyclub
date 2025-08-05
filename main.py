@@ -58,7 +58,7 @@ st.markdown("""
 
 col1, col2 = st.columns([1, 4])  # más espacio para el título
 with col1:
-    st.image("logovrc.png", width=150)  # probá con 80 o 120 si no entra bien
+    st.image("logovrc.png", width=80)  # probá con 80 o 120 si no entra bien
 with col2:
     st.markdown("<h1 style='margin-top: 0.8rem;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
