@@ -58,7 +58,10 @@ st.markdown("""
 
 col = st.columns(3)[1]
 with col:
+    st.markdown("<div style='margin-top: -80px;'></div>", unsafe_allow_html=True)
     st.image("logovrc.png", width=220)
+
+
 
 st.markdown("<h1 style='text-align: center; margin-top: -80px;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
