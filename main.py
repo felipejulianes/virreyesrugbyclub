@@ -60,9 +60,7 @@ col = st.columns(3)[1]
 with col:
     st.image("logovrc.png", width=220)
 
-st.markdown("<div style='margin-top: -100px;'></div>", unsafe_allow_html=True)
-
-st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; margin-top: -40px;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
 
 
 # Mensaje principal
