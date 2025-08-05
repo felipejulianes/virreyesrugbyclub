@@ -56,10 +56,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("<div style='margin-top: -50px;'></div>", unsafe_allow_html=True)  # achica el espacio superior
 
-col = st.columns(3)[1]  # columna del medio
+col = st.columns(3)[1]
 with col:
-    st.image("logovrc.png", width=150)
+    st.image("logovrc.png", width=250)
+
+st.markdown("<div style='margin-top: -20px;'></div>", unsafe_allow_html=True)  # achica el espacio entre logo y título
 
 # Título central
 st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
