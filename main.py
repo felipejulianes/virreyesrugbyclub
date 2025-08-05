@@ -56,11 +56,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-col = st.columns(3)[1]  # columna del medio
-with col:
-    st.image("logovrc.png", width=250)
-
+st.markdown("""
+    <div style="text-align: center; margin-top: -20px; margin-bottom: 10px;">
+        <img src="logovrc.png" width="250">
+    </div>
+""", unsafe_allow_html=True)
 
 # Título central
 st.markdown("<h1 style='text-align: center;'>SOCIO SOLIDARIO</h1>", unsafe_allow_html=True)
